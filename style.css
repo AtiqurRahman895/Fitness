@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html{
+    --custom-red:#E6533C;
+    --custom-gray:#222222;
+    --custom-gradient: linear-gradient(#222222, black);
+    box-sizing: border-box;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: inherit;
+}
+
+
+body{
+    font-family: "Inter", sans-serif;
+    background: black;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.white_a{
+    color: white;
+}
+a{
+    transition: 0.6s;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--custom-red);
+}
+.white_a:hover{
+    color: white;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: white;
+}
+h1 {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 1.5rem + 3.75vw, 4.875rem);
+}
+h2 {
+  font-size: 2rem;
+  font-size: clamp(
+    2rem,
+    1.9285714285714286rem + 0.35714285714285715vw,
+    2.25rem
+  );
+}
+h3 {
+    font-size: 1rem;
+    font-size: clamp(1rem, 1.9642857142857144rem + -1.0714285714285714vw, 1.75rem);
+}
+h4 {
+  font-size: 23px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 16px;
+}
+
+.wrapper {
+  margin-inline: auto;
+  width: clamp(18.75rem, 5.178571428571427rem + 67.85714285714286vw, 66.25rem);
+}
+
+.card{
+    padding: 1rem;
+}
+.btn{
+    transition: 0.6s;
+    border-radius: 100px;
+    
+}
+.btn:hover{
+    background: var(--custom-red);
+}
+
+
+
+/* ********** header Secton ***********/
+
+.headerWrapper {
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menus {
+    position: absolute;
+    width: 100%;
+    height: 60svh;
+    top: 108px;
+    /* right: -4rem; */
+    background: black;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2px;
+    transition: 0.6s;
+    transform: scaleY(0);
+    transform-origin: top;
+    
+}
+.toggleAnimation{
+    transform: scaleY(1);
+}
+
+.logo{
+    font-style: italic;
+    color: var(--custom-red);
+    font-size: 36px;
+}
+
+
+.menuBtn{
+    width: 70%;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
+}
+
+.menusToggler{
+    transition: 0.6s;
+    color: white;
+    font-size: 1.3rem;
+    
+}
+.menusToggler:hover{
+    color: var(--custom-red);
+}
+.menusTogglerAnimation{
+    color: var(--custom-red);
+}
+
+@media(min-width:576px){
+
+
+
+
+}
+
+@media(min-width:768px){
+    .menus {
+        position: static;
+        width: fit-content;
+        height: auto;
+        flex-direction: row;
+        border-radius: 100px;
+        transform: scaleY(1);
+
+    }
+
+    .menusToggler{
+        display: none;
+    }
+
+
+
+}
+
+@media(min-width:993px){
+    
+    
+}
+
