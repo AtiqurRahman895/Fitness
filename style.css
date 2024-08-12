@@ -87,6 +87,7 @@ h6 {
   width: clamp(18.75rem, 5.178571428571427rem + 67.85714285714286vw, 66.25rem);
   overflow: hidden;
   padding-inline: 1rem;
+  margin-bottom: 3rem;
 }
 
 .card {
@@ -119,6 +120,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   overflow: visible;
+  margin-bottom: 0;
 }
 
 .menus {
@@ -278,4 +280,212 @@ h6 {
   .heroWrapper {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/************** habit section **************/
+
+.habitswrapper {
+  display: grid;
+  gap: 3rem;
+}
+.habitsHeader {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+.allHabits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+.eachHabit {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+.habitImage {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+}
+
+@media (min-width: 576px) {
+  .allHabits {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 993px) {
+  .allHabits {
+    gap: clamp(2rem, -2.4429530201342278rem + 7.158836689038031vw, 4rem);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/************** run section **************/
+
+.runWrapper {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  background: var(--custom-gray);
+  border-radius: 10px;
+}
+.runContent {
+  display: grid;
+  gap: 1rem;
+}
+.runBtn {
+  max-width: 215px;
+  padding: 0.5rem 2rem;
+  color: white;
+  background: var(--custom-red);
+  text-align: center;
+}
+.runImage {
+  width: 100%;
+  aspect-ratio: 3/2;
+  border-radius: 10px;
+  background: url(./images/run.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 576px) {
+  .runWrapper {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+  }
+  .runImage {
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 993px) {
+  .runWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 3rem;
+  }
+  .runContent {
+    max-width: 400px;
+  }
+  .runImage {
+    max-width: 270px;
+  }
+}
+
+/************** trainings section **************/
+
+.trainingsWrapper {
+  display: grid;
+  gap: 2rem;
+}
+.trainingsHeader {
+  display: grid;
+  gap: 1rem;
+}
+.trainingsImages {
+  display: grid;
+}
+
+.firstImagesRow {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+}
+.secondImagesRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+.firstImagesRow .eachTrainingsImages:nth-child(2) {
+  display: none;
+}
+.secondImagesRow .eachTrainingsImages:nth-child(1) {
+  display: none;
+}
+
+.eachTrainingsImages {
+  position: relative;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.eachCardBG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.eachTrainingName {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+  z-index: 2;
+}
+
+@media (min-width: 576px) {
+  .firstImagesRow .eachTrainingsImages:nth-child(2) {
+    display: inline;
+  }
+  .secondImagesRow .eachTrainingsImages:nth-child(1) {
+    display: inline;
+  }
+  .firstImagesRow {
+    grid-template-columns: 1fr 2fr 1.1fr;
+  }
+  .secondImagesRow {
+    grid-template-columns: 2fr 1fr 1.2fr;
+  }
+}
+
+/************** team section **************/
+
+.teamwrapper {
+  display: grid;
+  gap: 2rem;
+}
+.teamMembers {
+  padding: 2rem;
+  background: var(--custom-gray);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.eachTeamMember {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/1.6;
+  border-radius: 10px;
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+.eachTeamMemberInfo {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+.eachTeamMemberInfo p{
+  color: white;
+}
+
+@media (min-width: 576px) {
+  .teamMembers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .eachTeamMember {
+    aspect-ratio: 1/2;
+  }
+
+}
+@media (min-width: 800px) {
+  .eachTeamMember {
+    aspect-ratio: 2/1.6;
+  }
+
 }
