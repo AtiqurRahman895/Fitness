@@ -446,7 +446,6 @@ h6 {
   gap: 2rem;
 }
 .teamMembers {
-  padding: 2rem;
   background: var(--custom-gray);
   border-radius: 10px;
   display: grid;
@@ -487,5 +486,129 @@ h6 {
   .eachTeamMember {
     aspect-ratio: 2/1.6;
   }
+
+}
+
+
+/************** footer section **************/
+
+.footerSection{
+  background: var(--custom-gray);
+}
+.footerWrapper {
+  margin-bottom: 0;
+}
+
+.footerContents {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footerHeader {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.footerMenus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.eachFooterMenu {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.footerMenuLinks {
+  display: grid;
+  gap: 0.5rem;
+}
+.footerMenuLinks>a:hover {
+  color: var(--custom-red);
+}
+
+.footerCopyRights {
+  padding-block: 1.5rem;
+  text-align: center;
+}
+.footerCopyRights a {
+  animation-name: glowMyPortfolioLink;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.28, -0.08, 0.61, 1.04);
+}
+
+@keyframes glowMyPortfolioLink {
+  0%{
+      color: #e6533c;
+    
+  }
+
+  25%{
+      color: #ca2f18;
+
+  }
+  50%{
+      color: #d84630;
+
+  }
+  75%{
+    color: #f05c45;
+
+  }
+  100%{
+    color: var(--custom-red);
+
+  }
+
+}
+
+@media (min-width: 400px) {
+
+  .footerMenus {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+}
+
+@media (min-width: 576px) {
+
+  .footerMenus {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+}
+@media (min-width: 800px) {
+  .footerContents {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+
+  
+  .footerMenus {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+
+  .eachFooterMenu {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  
+
 
 }
