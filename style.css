@@ -439,6 +439,108 @@ h6 {
   }
 }
 
+/************** BMI Header section **************/
+
+.bmiHeader{
+  display: grid;
+  gap: 0.5rem;
+}
+
+/************** BMI section **************/
+
+.bmiSection{
+  background: var(--custom-gray);
+}
+
+.bmiWrapper{
+  padding: 0;
+  padding-block: 2rem;
+
+}
+
+.bmiContents {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bmiChart {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.bmiChartTable{
+  width: 100%;
+}
+.bmiChartTable tr{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+.bmiChartTable tr th{
+  color: white;
+}
+.bmiChartTable tr th, .bmiChartTable tr td{
+  padding: 10px;
+  text-align: start;
+}
+
+.bmiCalculator {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.calculatorCredential {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.heightAndWeight, .ageAndSex {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.calculatorCredential input, .calculatorCredential select {
+  padding: 9px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: rgb(255 255 255 / 10%);
+  color: inherit;
+  width: 100%;
+}
+
+.calculatorCredential option {
+  padding: 9px;
+  background: rgb(255 255 255 / 10%);
+  color: white;
+}
+.calculatorCredential option:hover {
+  background: var(--custom-red);
+}
+
+.claculateBmi {
+  width: fit-content;
+  color: white;
+  background: #e6533c;
+  padding: 0.6rem 4rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .bmiContents {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
 /************** team section **************/
 
 .teamwrapper {
@@ -513,9 +615,7 @@ h6 {
 }
 
 .footerMenus {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
   gap: 1rem;
 }
 
@@ -574,9 +674,10 @@ h6 {
 
   .footerMenus {
     display: flex;
-    justify-content: flex-start;
-    gap: 5rem;
-}
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 
 }
 
