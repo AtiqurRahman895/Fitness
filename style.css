@@ -518,7 +518,7 @@ h6 {
 .calculatorCredential option {
   padding: 9px;
   background: rgb(255 255 255 / 10%);
-  color: white;
+  color: inherit;
 }
 .calculatorCredential option:hover {
   background: var(--custom-red);
@@ -612,6 +612,22 @@ h6 {
   display: flex;
   gap: 1rem;
   flex-direction: column;
+}
+.footerContact {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.footerContact div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footerContact i {
+  font-size: 1rem;
+  color: var(--custom-red);
 }
 
 .footerMenus {
