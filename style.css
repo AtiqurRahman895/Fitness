@@ -518,7 +518,7 @@ h6 {
 .calculatorCredential option {
   padding: 9px;
   background: rgb(255 255 255 / 10%);
-  color: inherit;
+  color: black !important;
 }
 .calculatorCredential option:hover {
   background: var(--custom-red);
