@@ -472,6 +472,8 @@ h6 {
 
 .bmiChartTable{
   width: 100%;
+  /* border: 1px solid; */
+  border-collapse: collapse;
 }
 .bmiChartTable tr{
   display: grid;
@@ -532,6 +534,14 @@ h6 {
   border: none;
   outline: none;
   cursor: pointer;
+}
+.bmiBmrTdeeResults{
+  width: 100%;
+  display: grid;
+  gap: 0.5rem;
+}
+.bmiBmrTdeeResults b{
+  color: var(--custom-red);
 }
 
 @media (min-width: 800px) {

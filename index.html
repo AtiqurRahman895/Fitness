@@ -222,8 +222,8 @@
     <section>
       <div class="wrapper bmiHeaderWrapper">
         <div class="bmiHeader">
-          <h2>BMI Calculator</h2>
-          <p>Understanding your Body Mass Index (BMI) can be the first step to better health. Use our simple calculator to determine your BMI and take control of your fitness journey.</p>
+          <h2>BMI, BMR, TDEE Calculator</h2>
+          <p>Understanding your Body Mass Index (BMI), Basal Metabolic Rate (BMR), Total Daily Energy Expenditure (TDEE) can be the first step to better health. Use our simple calculator to determine your BMI,BMR,TDEE and take control of your fitness journey.</p>
         </div>
       </div>
     </section>
@@ -258,35 +258,47 @@
           </div>
 
           <div class="bmiCalculator">
-            <h5>Calculate your BMI</h5>
+            <h5>Calculate your BMI, BMR & TDEE</h5>
             <p>
-              Enter your height, weight, age, and activity level to find out where you stand." 
+              Enter your height, weight, age, sex and activity level to find out where you stand. Remember to fill all these input to get your BMI, BMR & TDEE
             </p>
+
             <div class="calculatorCredential">
 
-              <div class="heightAndWeight">
-                <input type="text" class="height" id="height" name="height" placeholder="Height/cm">
-                <input type="text" class="weight" id="weight" name="weight" placeholder="Weight/kg">
+              <div class="heightAndWeight" >
+                <input type="number" class="height" id="height" name="height" placeholder="Height/cm" required>
+                <input type="number" class="weight" id="weight" name="weight" placeholder="Weight/kg" required>
               </div>
 
               <div class="ageAndSex">
-                <input type="text" class="age" id="age" name="age" placeholder="Age">
-                <select name="sex" class="sex" id="sex" name="sex">
+                <input type="number" class="age" id="age" name="age" placeholder="Age" required>
+                <select name="sex" class="sex" id="sex" name="sex" required>
                   <option disabled selected>Sex</option>
                   <option value="men">Men</option>
                   <option value="women">Women</option>
                 </select>
               </div>
 
-              <select name="activity" class="activity" id="activity" name="activity">
+              <select name="activity" class="activity" id="activity" name="activity" required>
                 <option disabled selected>Select an activity factor</option>
-                <option value="running">Running</option>
-                <option value="running">Running</option>
-                <option value="running">Running</option>
-                <option value="running">Running</option>
+                <option value="1.2">Little or no exercise</option>
+                <option value="1.375">Lightly active</option>
+                <option value="1.55">Moderately active</option>
+                <option value="1.725">Very active</option>
+                <option value="1.9">Extra active</option>
               </select>
               
               <button type="button" class="btn claculateBmi">Calculate</button>
+
+              <div class="bmiBmrTdeeResults" >
+                <b class="bmiResult">
+                </b>
+                <b class="bmrResult">
+                </b>
+                <b class="tdeeResult">
+                </b>
+
+            </div>
 
             </div>
             
