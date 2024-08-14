@@ -12,6 +12,7 @@ html {
   margin: 0%;
   padding: 0%;
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -441,21 +442,20 @@ h6 {
 
 /************** BMI Header section **************/
 
-.bmiHeader{
+.bmiHeader {
   display: grid;
   gap: 0.5rem;
 }
 
 /************** BMI section **************/
 
-.bmiSection{
+.bmiSection {
   background: var(--custom-gray);
 }
 
-.bmiWrapper{
+.bmiWrapper {
   padding: 0;
   padding-block: 2rem;
-
 }
 
 .bmiContents {
@@ -470,20 +470,20 @@ h6 {
   flex-direction: column;
 }
 
-.bmiChartTable{
+.bmiChartTable {
   width: 100%;
   /* border: 1px solid; */
   border-collapse: collapse;
 }
-.bmiChartTable tr{
+.bmiChartTable tr {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 }
-.bmiChartTable tr th{
+.bmiChartTable tr th {
   color: white;
 }
-.bmiChartTable tr th, .bmiChartTable tr td{
+.bmiChartTable tr th,
+.bmiChartTable tr td {
   padding: 10px;
   text-align: start;
 }
@@ -500,14 +500,16 @@ h6 {
   gap: 0.5rem;
 }
 
-.heightAndWeight, .ageAndSex {
+.heightAndWeight,
+.ageAndSex {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
 }
 
-.calculatorCredential input, .calculatorCredential select {
+.calculatorCredential input,
+.calculatorCredential select {
   padding: 9px;
   border: none;
   outline: none;
@@ -517,12 +519,12 @@ h6 {
   width: 100%;
 }
 
-.calculatorCredential option {
+option {
   padding: 9px;
   background: rgb(255 255 255 / 10%);
   color: black !important;
 }
-.calculatorCredential option:hover {
+option:hover {
   background: var(--custom-red);
 }
 
@@ -535,12 +537,12 @@ h6 {
   outline: none;
   cursor: pointer;
 }
-.bmiBmrTdeeResults{
+.bmiBmrTdeeResults {
   width: 100%;
   display: grid;
   gap: 0.5rem;
 }
-.bmiBmrTdeeResults b{
+.bmiBmrTdeeResults b {
   color: var(--custom-red);
 }
 
@@ -580,7 +582,7 @@ h6 {
   left: 1rem;
   z-index: 2;
 }
-.eachTeamMemberInfo p{
+.eachTeamMemberInfo p {
   color: white;
 }
 
@@ -592,19 +594,16 @@ h6 {
   .eachTeamMember {
     aspect-ratio: 1/2;
   }
-
 }
 @media (min-width: 800px) {
   .eachTeamMember {
     aspect-ratio: 2/1.6;
   }
-
 }
-
 
 /************** footer section **************/
 
-.footerSection{
+.footerSection {
   background: var(--custom-gray);
 }
 .footerWrapper {
@@ -655,7 +654,10 @@ h6 {
   display: grid;
   gap: 0.5rem;
 }
-.footerMenuLinks>a:hover {
+.footerMenuLinks a{
+  width: fit-content;
+}
+.footerMenuLinks > a:hover {
   color: var(--custom-red);
 }
 
@@ -672,58 +674,46 @@ h6 {
 }
 
 @keyframes glowMyPortfolioLink {
-  0%{
-      color: #e6533c;
-    
+  0% {
+    color: #e6533c;
   }
 
-  25%{
-      color: #ca2f18;
-
+  25% {
+    color: #ca2f18;
   }
-  50%{
-      color: #d84630;
-
+  50% {
+    color: #d84630;
   }
-  75%{
+  75% {
     color: #f05c45;
-
   }
-  100%{
+  100% {
     color: var(--custom-red);
-
   }
-
 }
 
 @media (min-width: 400px) {
-
   .footerMenus {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
   }
-
 }
 
 @media (min-width: 576px) {
-
   .footerMenus {
     display: flex;
     justify-content: flex-start;
     gap: 5rem;
-}
-
+  }
 }
 @media (min-width: 800px) {
   .footerContents {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
-  
 
-  
   .footerMenus {
     display: flex;
     justify-content: space-evenly;
@@ -735,7 +725,4 @@ h6 {
     gap: 2rem;
     flex-direction: column;
   }
-  
-
-
 }

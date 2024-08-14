@@ -21,6 +21,26 @@ menusToggler.addEventListener(`click`, (e) => {
   menusToggler.classList.toggle("menusTogglerAnimation");
 });
 
+// hero workoutVideos and videoTutorial box animation
+
+let workoutVideos = 500;
+let videoTutorial = 350;
+
+function videosNumberBoxAnimation(target, videosNumber) {
+  let i = 0;
+  let interval = setInterval(() => {
+    i++;
+    document.querySelector(`.${target}`).innerText = `${i}+`;
+    
+    if (i === videosNumber) {
+      clearInterval(interval);
+    }
+  }, 3);
+}
+
+videosNumberBoxAnimation('workoutVideos', workoutVideos);
+videosNumberBoxAnimation('videoTutorial', videoTutorial);
+
 // BMI, BMR and TDEE calculation
 
 document.querySelector(`.claculateBmi`).addEventListener(`click`, (e) => {
@@ -64,13 +84,13 @@ document.querySelector(`.claculateBmi`).addEventListener(`click`, (e) => {
               // BMR formula for Men =88.362+(13.397×Weight in kg)+(4.799×Height in cm)−(5.677×Age in years)
 
               bmr = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
-              showBmrResult.innerText=`Your BMR as a MEN is ${parseFloat(bmr.toFixed(4))}`;
+              showBmrResult.innerText=`Your BMR as a MEN is ${parseFloat(bmr.toFixed(4))} calories/day`;
             } else if (sex.value == "women") {
               // BMR formula for Women =447.593+(9.247×Weight in kg)+(3.098×Height in cm)−(4.330×Age in years)
 
               bmr = 447.593 + 9.247 * weight + 3.098 * height - 4.33 * age;
               showBmrResult.innerText=
-                `Your BMR as a WOMEN is ${parseFloat(bmr.toFixed(4))}`;
+                `Your BMR as a WOMEN is ${parseFloat(bmr.toFixed(4))} calories/day`;
             } else {
               showBmrResult.innerText=`please select your sex to get your BMR`;
               return;
@@ -86,7 +106,7 @@ document.querySelector(`.claculateBmi`).addEventListener(`click`, (e) => {
                 // TDEE formula =BMR×Activity Factor
 
                 let tdee = bmr * activity;
-                showTdeeResult.innerText=`Your TDEE is ${parseFloat(tdee.toFixed(4))}`;
+                showTdeeResult.innerText=`Your TDEE is ${parseFloat(tdee.toFixed(4))} calories/day`;
               } else {
                 showTdeeResult.innerText=`please select your activity to get your TDEE`;
               }
