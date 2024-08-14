@@ -63,7 +63,7 @@ document.querySelector(`.claculateBmi`).addEventListener(`click`, (e) => {
     weight = Number(weight.value);
 
     if (height && weight) {
-      if (height > 30 && weight > 15) {
+      if (height > 10) {
         heightInMeter = height / 100;
 
         // BMI formula =Weight(kg) / (Height(m) * Height(m))
@@ -81,11 +81,13 @@ document.querySelector(`.claculateBmi`).addEventListener(`click`, (e) => {
             let bmr;
 
             if (sex.value == "men") {
+
               // BMR formula for Men =88.362+(13.397×Weight in kg)+(4.799×Height in cm)−(5.677×Age in years)
 
               bmr = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
               showBmrResult.innerText=`Your BMR as a MEN is ${parseFloat(bmr.toFixed(4))} calories/day`;
             } else if (sex.value == "women") {
+
               // BMR formula for Women =447.593+(9.247×Weight in kg)+(3.098×Height in cm)−(4.330×Age in years)
 
               bmr = 447.593 + 9.247 * weight + 3.098 * height - 4.33 * age;
@@ -101,7 +103,7 @@ document.querySelector(`.claculateBmi`).addEventListener(`click`, (e) => {
             if (activity.value) {
               console.log(`hi 3`);
               activity = Number(activity.value);
-              if (activity & bmr) {
+              if (activity) {
 
                 // TDEE formula =BMR×Activity Factor
 

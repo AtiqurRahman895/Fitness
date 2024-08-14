@@ -518,6 +518,12 @@ h6 {
   color: inherit;
   width: 100%;
 }
+.calculatorCredential input:valid,
+.calculatorCredential select:valid {
+
+  color: var(--custom-red);
+
+}
 
 option {
   padding: 9px;
