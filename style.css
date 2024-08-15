@@ -283,41 +283,41 @@ h6 {
   }
 }
 
-/************** habit section **************/
+/************** benefits section **************/
 
-.habitswrapper {
+.benefitswrapper {
   display: grid;
   gap: 3rem;
 }
-.habitsHeader {
+.benefitsHeader {
   display: grid;
   gap: 1rem;
   text-align: center;
 }
-.allHabits {
+.allBenefits {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
 }
-.eachHabit {
+.eachBenefit {
   display: grid;
   gap: 1rem;
   text-align: center;
 }
-.habitImage {
+.benefitImage {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 100%;
 }
 
 @media (min-width: 576px) {
-  .allHabits {
+  .allBenefits {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 993px) {
-  .allHabits {
+  .allBenefits {
     gap: clamp(2rem, -2.4429530201342278rem + 7.158836689038031vw, 4rem);
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -633,11 +633,15 @@ option:hover {
   gap: 0.3rem;
 }
 
-.footerContact div {
+.footerContact a {
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.footerContact a:hover span{
+  transition: 0.5s;
+  transform: scale(1.03);
 }
 
 .footerContact i {
